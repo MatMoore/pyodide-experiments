@@ -1,0 +1,62 @@
+html {
+  --font-size-small: 1rem;
+  --font-size-medium: 1.25rem;
+  --font-size-large: 3rem;
+}
+
+body {
+  padding: 0 2rem;
+  margin: 0;
+  height: 100%;
+}
+
+.container {
+  display: grid;
+
+  grid-template-areas:
+    "header"
+    "input"
+    "output";
+
+  gap: 1rem;
+
+  grid-template-rows: min-content min-content auto;
+  height: 95vh;
+  scrollbar-gutter: stable;
+  overflow-y: scroll;
+}
+
+h1 {
+  font-size: var(--font-size-large);
+  grid-area: header;
+}
+
+.input {
+  grid-area: "input";
+  display: grid;
+  grid-template-areas: "input action";
+
+  gap: 1rem;
+
+  font-size: var(--font-size-medium);
+}
+
+.input input {
+  grid-area: input;
+  font-size: var(--font-size-medium);
+  padding: 0.75rem;
+}
+
+.input button {
+  grid-area: action;
+  font-size: var(--font-size-medium);
+  padding: 0.75rem;
+}
+
+.display {
+  border: 1px solid grey;
+  grid-area: output;
+  padding: 1rem;
+  font-size: var(--font-size-small);
+  line-height: 1.75;
+}
