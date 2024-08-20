@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Firebreak experiment - Describe CSV</title>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="app.css">
+        <link rel="stylesheet" type="text/css" href="../firebreak.css">
+    </head>
+    <body>
+        <div class="container">
+        <div id="header">
+            <h1>Firebreak experiment - Describe CSV</h1>
+            <p>Paste CSV data to see summary statistics.</p>
+            <p>🐼 This runs <code>pandas</code> in the browser 🐼</p>
+        </div>
+
+        <div id="input">
+            <label for="input_textarea">Input CSV</label>
+            <textarea class="code" id="input_textarea"></textarea>
+        </div>
+        
+        <div id="output">
+            <label for="output_textarea">Output</label>
+            <textarea class="code" id="output_textarea" disabled id="output"></textarea>
+        </div>
+
+        <div id="actions">
+            <button id="summarise">Summarise</button>
+        </div>
+        <script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+        <script src="./app.js"></script>
+        <script>
+            initApp();
+        </script>
+    </body>
+</html>
