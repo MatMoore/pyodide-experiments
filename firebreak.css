@@ -1,0 +1,21 @@
+html {
+  --font-size-small: 1rem;
+  --font-size-medium: 1.25rem;
+  --font-size-medium-large: 1.5rem;
+  --font-size-large: 3rem;
+}
+
+body {
+  padding: 0 2rem;
+  margin: 0;
+  height: 100%;
+  font-size: var(--font-size-medium);
+}
+
+h1 {
+  font-size: var(--font-size-large);
+}
+
+.index {
+  font-size: var(--font-size-medium-large);
+}
