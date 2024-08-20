@@ -40,10 +40,6 @@ class UI {
     });
   }
 
-  appendOutput(text) {
-    this.outputElement.value += text;
-  }
-
   async summarise(input) {
     let app = await this.appPromise;
     let output = app.run(input);
