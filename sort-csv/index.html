@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Firebreak experiment - Sort CSV</title>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="app.css">
+        <link rel="stylesheet" type="text/css" href="../firebreak.css">
+    </head>
+    <body>
+        <div class="container">
+        <div id="header">
+            <h1>Firebreak experiment - Sort CSV</h1>
+            <p>Paste CSV data to sort it by the first column.</p>
+            <p>This uses <code>pyfetch</code> to fetch a python module into the virtual filesystem. For more info see <a href="https://pyodide.org/en/stable/usage/loading-custom-python-code.html">Loading custom Python code</a>.</p>
+            <p>Note: The browser's same origin policy will block this fetch if opening the file directly via a <code>file://</code> url.</p>
+        </div>
+
+        <div id="input">
+            <label for="input_textarea">Input CSV</label>
+            <textarea class="code" id="input_textarea"></textarea>
+        </div>
+        
+        <div id="output">
+            <label for="output_textarea">Output CSV</label>
+            <textarea class="code" id="output_textarea" disabled id="output"></textarea>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+        <script src="./app.js"></script>
+        <script>
+            initApp();
+        </script>
+    </body>
+</html>
