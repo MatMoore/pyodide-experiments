@@ -1,0 +1,60 @@
+.container {
+  display: grid;
+
+  grid-template-areas:
+    "header header"
+    "input output"
+    "actions actions";
+
+  gap: 1rem;
+
+  grid-template-rows: min-content auto min-content;
+  height: 95vh;
+}
+
+#header {
+  grid-area: header;
+}
+
+#input {
+  grid-area: input;
+  font-size: var(--font-size-medium);
+}
+
+#output {
+  grid-area: output;
+}
+
+#actions {
+  grid-area: actions;
+  justify-self: center;
+}
+
+button {
+  font-size: var(--font-size-medium);
+  padding: 0.75rem;
+}
+
+.code {
+  display: block;
+  position: relative;
+  bottom: 0;
+  padding: 1rem;
+  font-size: var(--font-size-small);
+  line-height: 1.75;
+
+  resize: none;
+  scrollbar-gutter: stable;
+
+  overflow-y: scroll;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 0.5rem;
+  height: calc(100% - 2rem);
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: var(--font-size-medium-large);
+}
